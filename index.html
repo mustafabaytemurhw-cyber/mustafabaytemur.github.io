@@ -27,10 +27,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#page-top">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Social Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Profile</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -44,42 +44,6 @@
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
@@ -227,11 +191,11 @@
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                                Be Part
+                                Explore   
                                 <br />
-                                Of Our
+                                My
                                 <br />
-                                Story!
+                                Projects
                             </h4>
                         </div>
                     </li>
@@ -242,8 +206,8 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">PROFILE</h2>
+                    
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
@@ -260,80 +224,138 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">I’m a hardware engineer who enjoys designing and building complete electronic systems from scratch.
+                        I work across a wide range of areas — from PCB design and embedded hardware to power electronics, motor control, sensor systems, communication protocols and custom circuit development.
+                        My approach is practical, detail-oriented and focused on creating reliable, high-performance solutions.
+                        If you’re working on something new or need support turning an idea into a real product, feel free to reach out.</p></div>
                 </div>
             </div>
         </section>
         <!-- Clients-->
         <!-- Contact-->
+        <!-- Contact -->
+
         <section class="page-section" id="contact">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <div class="text-center">            
+                    <h2 class="section-heading text-uppercase">Contact Me</h2>         
+                    <h3 class="section-subheading text-muted">                
+                        If you have a project or want to reach out, feel free to send a message.          
+                    </h3>        
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
+        
+                <!-- Başarı / Hata mesaj kutuları (başlangıçta gizli) -->        
+                <div id="msgSuccess" class="alert alert-success text-center" role="alert"             
+                    style="display:none;">            
+                    ✅ Your message was sent – thank you! I’ll get back to you shortly.        
+                </div>        
+                <div id="msgError" class="alert alert-danger text-center" role="alert"            
+                    style="display:none;">          
+                    ❌ Something went wrong. Please try again.        
+                </div>
+        
+                <form id="contactForm"
+                    action="https://formsubmit.co/mustafabaytemur.hw@gmail.com"
+                    method="POST">
+
+                    <!-- FormSubmit ayarları -->
+            
+                    <input type="hidden" name="_captcha"   value="false">            
+                    <input type="hidden" name="_template" value="table">
+
+            
+                    <!-- --------- DİZİLİ YÖNLENDİRME ---------- -->
+            
+                    <!-- Form gönderildikten sonra bu URL’ye (kendi sitene) dönülür -->
+            
+                    <input type="hidden" name="_next"              
+                        value="https://mustafabaytemurhw-cyber.github.io/mustafabaytemur.github.io/#contact">
+       
+                    <div class="row align-items-stretch mb-5">              
+                        <div class="col-md-6">                
                             <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" name="name" type="text"
+                                    placeholder="Your Name *" required />             
                             </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            <div class="form-group">                   
+                                <input class="form-control" name="email" type="email"
+                                    placeholder="Your Email *" required />
                             </div>
                             <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <input class="form-control" name="phone" type="tel"             
+                                    placeholder="Your Phone" />
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                        </div>
+                                <textarea class="form-control" name="message"    
+                                    placeholder="Your Message *" required></textarea>            
+                            </div>        
+                        </div>    
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                </form>
+   
+                    <div class="text-center">           
+                        <button class="btn btn-primary btn-xl text-uppercase"                 
+                            type="submit" id="btnSubmit">                   
+                            Send              
+                        </button>          
+                    </div>       
+                </form>    
             </div>
         </section>
+        <script>
+
+            /* -------------------------------------------------
+            AJAX (fetch) ile FormSubmit’a POST gönderiyoruz.
+            - Sayfa yenilenmez → kullanıcı aynı #contact bölümünde kalır.
+            - Başarı / hata mesajları gösterilir.
+            ------------------------------------------------- */
+
+            document.getElementById('contactForm').addEventListener('submit', async function (e) {    
+                e.preventDefault();                               // sayfa yenilemeyi engelle    
+                const form   = e.target;    
+                const btn    = document.getElementById('btnSubmit');    
+                const successBox = document.getElementById('msgSuccess');    
+                const errorBox   = document.getElementById('msgError');
+    
+                btn.disabled = true;    
+                btn.textContent = 'Sending...';    
+                successBox.style.display = 'none';   
+                errorBox.style.display   = 'none';
+    
+                try {        
+                    const response = await fetch(form.action, {            
+                        method: 'POST',            
+                        body: new FormData(form),            
+                        headers: { 'Accept': 'application/json' }       
+                    });
+       
+                    if (response.ok) {          
+                        successBox.style.display = 'block';           
+                        form.reset();        
+                    } else {            
+                        const data = await response.json();            
+                        errorBox.textContent = '❌ Error: ' + (data.error || response.statusText);            
+                        errorBox.style.display = 'block';       
+                    }    
+                } catch (err) {
+                    errorBox.textContent = '❌ Communication problem: ' + err.message;
+                    errorBox.style.display = 'block';
+                } finally {
+                    btn.disabled = false;
+                    btn.textContent = 'Send';
+                }
+            });
+        </script>
+
+
+
+       
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                    <div class="col-lg-4 text-lg-start">&copy; 2025 Mustafa Baytemür. All Rights Reserved.</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
