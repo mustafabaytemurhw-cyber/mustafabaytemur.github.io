@@ -267,66 +267,130 @@
         <!-- Clients-->
         <!-- Contact-->
         <!-- Contact -->
+
         <section class="page-section" id="contact">
+    
             <div class="container">
+        
                 <div class="text-center">
+            
                     <h2 class="section-heading text-uppercase">Contact Me</h2>
+            
                     <h3 class="section-subheading text-muted">
+                
                         If you have a project or want to reach out, feel free to send a message.
+            
                     </h3>
+        
                 </div>
 
+        
                 <!-- Başarı / Hata mesaj kutuları (başlangıçta gizli) -->
         
                 <div id="msgSuccess" class="alert alert-success text-center" role="alert"
              
                     style="display:none;">
+            
                     ✅ Mesajınız gönderildi, teşekkür ederim! En kısa sürede size geri döneceğim.
+        
                 </div>
+        
                 <div id="msgError" class="alert alert-danger text-center" role="alert"
+             
                     style="display:none;">
+            
                     ❌ Bir sorun oluştu. Lütfen tekrar deneyin.
-       
+        
                 </div>
-                <form id="contactForm"
-                    action="https://formsubmit.co/mustafabaytemur.hw@gmail.com"
-                    method="POST">
-                    <!-- FormSubmit ayarları -->
-                    <input type="hidden" name="_captcha"   value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <!-- _next için yönlendirme ihtiyacı yok, AJAX ile sayfa yenilenmez -->
 
+        
+                <form id="contactForm"
+              
+                    action="https://formsubmit.co/mustafabaytemur.hw@gmail.com"
+              
+                    method="POST">
+
+            
+                    <!-- FormSubmit ayarları -->
+            
+                    <input type="hidden" name="_captcha"   value="false">
+            
+                    <input type="hidden" name="_template" value="table">
+
+            
+                    <!-- --------- DİZİLİ YÖNLENDİRME ---------- -->
+            
+                    <!-- Form gönderildikten sonra bu URL’ye (kendi sitene) dönülür -->
+            
+                    <input type="hidden" name="_next"
+                   
+                        value="https://mustafabaytemurhw-cyber.github.io/mustafabaytemur.github.io/#contact">
+
+            
                     <div class="row align-items-stretch mb-5">
+                
                         <div class="col-md-6">
+                    
                             <div class="form-group">
+                        
                                 <input class="form-control" name="name" type="text"
+                               
                                     placeholder="Your Name *" required />
+                    
                             </div>
+                    
                             <div class="form-group">
+                        
                                 <input class="form-control" name="email" type="email"
+                               
                                     placeholder="Your Email *" required />
+                    
                             </div>
+                    
                             <div class="form-group mb-md-0">
+                        
                                 <input class="form-control" name="phone" type="tel"
+                               
                                     placeholder="Your Phone" />
+                    
                             </div>
+                
                         </div>
+                
                         <div class="col-md-6">
+                    
                             <div class="form-group form-group-textarea mb-md-0">
+                        
                                 <textarea class="form-control" name="message"
+                                  
                                     placeholder="Your Message *" required></textarea>
+                    
                             </div>
+                
                         </div>
+            
                     </div>
+
+            
                     <div class="text-center">
+                
                         <button class="btn btn-primary btn-xl text-uppercase"
+                        
                             type="submit" id="btnSubmit">
+                    
                             Send
+                
                         </button>
+            
                     </div>
+        
                 </form>
+    
             </div>
+
         </section>
+
+
         <script>
 
             /* -------------------------------------------------
@@ -334,42 +398,76 @@
             - Sayfa yenilenmez → kullanıcı aynı #contact bölümünde kalır.
             - Başarı / hata mesajları gösterilir.
             ------------------------------------------------- */
+
             document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    
                 e.preventDefault();                               // sayfa yenilemeyi engelle
+    
                 const form   = e.target;
+    
                 const btn    = document.getElementById('btnSubmit');
+    
                 const successBox = document.getElementById('msgSuccess');
+    
                 const errorBox   = document.getElementById('msgError');
 
-                // UI: gönderim sırasında butonu devre dışı bırak
+    
                 btn.disabled = true;
+    
                 btn.textContent = 'Sending...';
+    
                 successBox.style.display = 'none';
+    
                 errorBox.style.display   = 'none';
 
+    
                 try {
+        
                     const response = await fetch(form.action, {
+            
                         method: 'POST',
+            
                         body: new FormData(form),
-                        headers: { 'Accept': 'application/json' }   // FormSubmit JSON yanıtı verir});
-                            if (response.ok) {            // 200‑OK → başarı
+            
+                        headers: { 'Accept': 'application/json' }
+        
+                    });
+
+        
+                    if (response.ok) {
+            
                         successBox.style.display = 'block';
-                        form.reset();             // form alanlarını temizle
-                    } else {                      // FormSubmit bir hata döndürdü
+            
+                        form.reset();
+        
+                    } else {
+            
                         const data = await response.json();
+            
                         errorBox.textContent = '❌ Hata: ' + (data.error || response.statusText);
+            
                         errorBox.style.display = 'block';
+       
                     }
+    
                 } catch (err) {
-                    // Ağ / fetch hatası
+        
                     errorBox.textContent = '❌ İletişim sorunu: ' + err.message;
+        
                     errorBox.style.display = 'block';
+    
                 } finally {
+        
                     btn.disabled = false;
+        
                     btn.textContent = 'Send';
+    
                 }
+
             });
+
         </script>
+
 
 
        
