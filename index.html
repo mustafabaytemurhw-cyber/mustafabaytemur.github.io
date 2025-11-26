@@ -512,8 +512,35 @@
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
+                                        <ul style="text-align: left; padding-left: 20px;">
+                                            <li style="text-align: left;"><strong>Overview:</strong> A robust 6-channel module designed for industrial power management, featuring isolated communication, high-current relay switching, and a multi-stage regulated power subsystem.</li>
+                                            <li style="text-align: left;"><strong>Input Conditioning:</strong> The power input is protected with transient suppression, common-mode filtering, and capacitive filtering to ensure a clean, noise-resilient supply rail.</li>
+                                            <li style="text-align: left;">
+                                                <strong>Power Conversion:</strong>
+                                                <ul style="padding-left: 20px; margin-top: 5px;">
+                                                    <li>The incoming voltage is stepped down through a high-efficiency switching regulator to generate a stable 12-volt rail.</li>
+                                                    <li>A secondary conversion stage provides a regulated 5-volt supply for auxiliary loads.</li>
+                                                    <li>A clean and stable 3.3-volt logic domain is derived from the 12-volt rail to supply control electronics.</li>
+                                                </ul>
+                                            </li>
+                                            <li style="text-align: left;"><strong>Control and System Monitoring:</strong> The control core monitors the input line and the regulated 12-volt output using dedicated measurement channels. A hardware reset line is provided for local maintenance and debugging.</li>
+                                            <li style="text-align: left;"><strong>Isolated Communication:</strong> External interfaces operate through a galvanically isolated CAN channel, offering strong resilience against electrical noise and ensuring reliable data exchange in industrial conditions.</li>
+                                            <li style="text-align: left;"><strong>Switching Architecture:</strong> The board supports six independent relay channels designed to handle high-current and high-voltage AC loads commonly found in industrial automation.</li>
+                                            <li style="text-align: left;"><strong>Relay Drive Stage:</strong> Control signals are galvanically isolated through optical couplers and processed by NPN driver elements, ensuring safe separation between logic circuitry and the high-power switching domain.</li>
+                                            <li style="text-align: left;">
+                                                <strong>PCB Layout & Design Strategy:</strong>
+                                                <ul style="padding-left: 20px; margin-top: 5px;">
+                                                    <li>High-current paths are routed with optimal width and thermal handling considerations.</li>
+                                                    <li>Ground domains for logic and power are separated to minimize interference.</li>
+                                                    <li>Component placement and layer structure were optimized to maintain EMI performance and overall signal integrity.</li>
+                                                    <li>Board geometry and routing differ from the previous version, offering improved mechanical layout for enclosure compatibility.</li>
+                                                </ul>
+                                            </li>
+                                            <li style="text-align: left;"><strong>Industrial Robustness:</strong> The design emphasizes long-term stability, noise immunity, thermal reliability, and resilience under harsh operating environments.</li>
+                                        </ul>
+
+                                        
                                         <li>
                                             <strong>Project:</strong>
                                             Embedded Hardware Project
