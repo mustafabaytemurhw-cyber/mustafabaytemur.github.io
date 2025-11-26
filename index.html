@@ -477,7 +477,93 @@
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul style="text-align: left; padding-left: 20px;">
+                                        <!-- 1. Overview -->
+                                        <li style="text-align: left;">
+                                            <strong>Overview:</strong> 
+                                            High‑performance main control board that manages every electronic subsystem of a rugged‑terrain 4×4 electric scooter. Optimised for KLS7212N motor drivers and equipped with a flexible interface to support alternative driver modules.
+                                        </li>
+
+                                        <!-- 2. Power & Protection Architecture -->
+                                        <li style="text-align: left;">
+                                            <strong>Power &amp; Protection Architecture:</strong>
+                                            <ul style="padding-left: 20px; margin-top: 5px;">
+                                                <li>48 V battery input guarded by TVS diodes (over‑voltage transients) and common‑mode chokes + LC‑filter network (EMI suppression).</li>
+                                                <li>Multi‑stage DC‑DC conversion creates isolated rails:
+                                                    <ul style="padding-left: 20px; margin-top: 5px;">
+                                                        <li>12 V rail – high‑efficiency buck regulator.</li>
+                                                        <li>5 V rail – secondary buck stage for auxiliary loads.</li>
+                                                        <li>3.3 V rail – low‑noise regulator for logic.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>All rails are continuously monitored by the STM32 MCU (ADC‑based voltage/temperature sensing) to guarantee system stability.</li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 3. Motor Drive & Actuation Control -->
+                                        <li style="text-align: left;">
+                                            <strong>Motor Drive &amp; Actuation Control:</strong>
+                                            <ul style="padding-left: 20px; margin-top: 5px;">
+                                                <li>Analog throttle signal captured by the STM32 MCU.</li>
+                                                <li>Software pipeline:
+                                                    <ul style="padding-left: 20px; margin-top: 5px;">
+                                                        <li>Digital filtering (FIR/EMA).</li>
+                                                        <li>Linearisation &amp; mapping to motor‑speed set‑point.</li>
+                                                        <li>Safety checks – sudden‑throttle protection, configurable speed‑limit.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Control output can be routed as:
+                                                    <ul style="padding-left: 20px; margin-top: 5px;">
+                                                        <li><strong>PWM</strong> – classic pulse‑width modulation.</li>
+                                                        <li><strong>DAC</strong> – analog voltage for drivers that accept an analog command.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Forward/reverse selection and braking are performed by high‑current MOSFET switching stages directly commanded by the MCU.</li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 4. Sensor Fusion & Feedback -->
+                                        <li style="text-align: left;">
+                                            <strong>Sensor Fusion &amp; Feedback:</strong>
+                                            <ul style="padding-left: 20px; margin-top: 5px;">
+                                                <li>Hall sensors – motor speed &amp; rotor position.</li>
+                                                <li>High‑resolution encoder – handlebar steering angle.</li>
+                                                <li>BNO055 9‑axis IMU – 3‑D orientation, linear acceleration, heading.</li>
+                                                <li>All sensor lines pass through level‑shifters, anti‑alias filters and conditioning circuits before reaching the MCU.</li>
+                                                <li>Kalman‑filter based fusion provides a low‑latency, robust estimate of vehicle state for traction‑control and stability‑assist functions.</li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 5. Industrial Communication -->
+                                        <li style="text-align: left;">
+                                            <strong>Industrial Communication:</strong> 
+                                            CAN 2.0B bus for deterministic, noise‑immune communication with the rider‑display, auxiliary modules and diagnostic tools. Message framing, error checking and bus termination are designed to automotive‑grade reliability.
+                                        </li>
+
+                                        <!-- 6. PCB Layout & EMI/EMC Optimization -->
+                                        <li style="text-align: left;">
+                                            <strong>PCB Layout &amp; EMI/EMC Optimization:</strong>
+                                            <ul style="padding-left: 20px; margin-top: 5px;">
+                                                <li>4‑layer stack‑up with thick copper (2 oz) on high‑current traces.</li>
+                                                <li>Separate analog, digital and power domains with dedicated ground planes.</li>
+                                                <li>Controlled‑impedance routing for high‑speed CAN traces.</li>
+                                                <li>Thermal management: thermal vias, large copper pours and MOSFET‑compatible heatsink pads.</li>
+                                                <li>EMI reduction via split‑plane strategy, ferrite beads and strategic component placement.</li>
+                                            </ul>
+                                        </li>
+                                        <!-- 7. Safety & System Reliability -->
+                                        <li style="text-align: left;">
+                                            <strong>Safety &amp; System Reliability:</strong>
+
+                                            <ul style="padding-left: 20px; margin-top: 5px;">
+                                                <li>Hardware safeguards – poly‑fuses, current limiters, reverse‑polarity protection.</li>
+                                                <li>Software watchdog timer (2 s timeout) plus periodic self‑test routines.</li>
+                                                <li>Continuous temperature &amp; voltage monitoring with fault logging and graceful shutdown.</li>
+                                                <li>Debug interface (SWD + UART) for in‑field diagnostics and OTA firmware updates.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
                                     <ul class="list-inline">
                                         <li>
                                             <strong>Project:</strong>
