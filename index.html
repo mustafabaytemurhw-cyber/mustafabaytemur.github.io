@@ -474,14 +474,19 @@
                                     <p class="item-intro text-muted">High-Voltage Isolated 16-Channel Relay Driver Board (0–60V input)</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
                                     <ul style="text-align: left; padding-left: 20px;">
-                                        <li style="text-align: left;"><strong>Summary:</strong> Relay driver board supporting 0–60V DC input, designed with input protection and EMI-aware topology. The board separates power and control domains and provides isolated communication and reliable relay drive/feedback.</li>
-                                        <li style="text-align: left;"><strong>Input protection & filtering:</strong> TVS diode and common mode choke + capacitor network reduce input noise and transients.</li>
-                                        <li style="text-align: left;"><strong>Power architecture:</strong> High-input buck regulator to 12V, followed by low-input buck to 3.3V logic rail; design ensures stable transient response and low noise.</li>
-                                        <li style="text-align: left;"><strong>Control & comms:</strong> MCU with wide I/O and CAN support; isolated CAN transceiver protects the bus from noise.</li>
-                                        <li style="text-align: left;"><strong>Relay drive capability:</strong> Drives relays up to 60V / 7A; 16 relays via 8 connectors independently controlled.</li>
-                                        <li style="text-align: left;"><strong>Drive scheme:</strong> MCU outputs optically isolated and amplified via NPN transistor to drive P-channel high-side switches.</li>
-                                        <li style="text-align: left;"><strong>Relay feedback path:</strong> Feedback signal processed through NPN switching transistor; when activated, PNP transistor passes a clean 3.3V logic-level signal to the MCU.</li>
-                                        <li style="text-align: left;"><strong>PCB & execution notes:</strong> High-current routing, thermal management, return-path optimization, split analog/digital grounds, and EMI/EMC-conscious layer design applied.</li>
+                                        <li style="text-align: left;"><strong>This project involved the design and development of a 16-channel industrial relay control board capable of operating from a wide 0–60V DC input range. The system was designed with industrial-grade protection, isolated communication, and EMI-conscious architecture to ensure reliable operation in electrically noisy environments. The board integrates power management, relay control, feedback monitoring, and CAN communication into a single platform suitable for industrial automation applications.</li>
+                                        <li style="text-align: left;"><strong>System Architecture Design:</strong> Designed the complete hardware architecture for a 16-channel industrial relay control system.</li>
+                                        <li style="text-align: left;"><strong>Wide Input Power Design:</strong> Developed a power architecture supporting 0–60V DC input operation with protection against transients and electrical disturbances.</li>
+                                        <li style="text-align: left;"><strong>Input Protection & EMI Filtering:</strong> Implemented TVS protection, common-mode choke filtering, and capacitor networks to improve immunity against conducted noise and surge events.</li>
+                                        <li style="text-align: left;"><strong>Multi-Stage Power Conversion:</strong> Designed a two-stage power supply architecture consisting of a high-voltage buck converter generating 12V and a secondary regulator generating a low-noise 3.3V rail for control electronics.</li>
+                                        <li style="text-align: left;"><strong>Microcontroller Integration:</strong> Selected and integrated an MCU with sufficient I/O resources and CAN communication capability for industrial control applications.</li>
+                                        <li style="text-align: left;"><strong>Isolated CAN Communication:</strong> Implemented an isolated CAN transceiver to improve communication reliability and protect the control system from bus-related noise and ground potential differences.</li>
+                                        <li style="text-align: left;"><strong>High-Side Switching Architecture:</strong> Developed an optically isolated relay drive structure utilizing NPN transistor stages and P-channel high-side switching devices.</li>
+                                        <li style="text-align: left;"><strong>Relay Feedback Monitoring:</strong> Designed feedback circuits that provide clean 3.3V logic-level status signals to the MCU using NPN and PNP transistor stages.</li>
+                                        <li style="text-align: left;"><strong>Signal Integrity Optimization:</strong> Optimized return current paths, grounding strategy, and signal routing to improve system stability and reduce susceptibility to interference.</li>
+                                        <li style="text-align: left;"><strong>PCB Layout Design:</strong> Designed the complete PCB layout in Altium Designer with emphasis on high-current routing, thermal management, EMC compliance, and manufacturability.</li>
+                                        <li style="text-align: left;"><strong>Protection & Reliability Engineering:</strong> Generated Gerber, drill, assembly, and fabrication files required for PCB production.</li>
+                                        <li style="text-align: left;"><strong>Prototype Validation:</strong> Performed design verification and hardware validation to ensure proper operation of power, communication, feedback, and relay control subsystems.</li>
                                     </ul>
 
                                     <ul class="list-inline">
@@ -491,7 +496,7 @@
                                         </li>
                                         <li>
                                             <strong>Category:</strong>
-                                            Relay Driver
+                                            Industrial Control System
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
