@@ -634,30 +634,24 @@
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
                                     <ul class="list-inline">
                                         <ul style="text-align: left; padding-left: 20px;">
-                                            <li style="text-align: left;"><strong>Overview:</strong> A robust 6-channel module designed for industrial power management, featuring isolated communication, high-current relay switching, and a multi-stage regulated power subsystem.</li>
-                                            <li style="text-align: left;"><strong>Input Conditioning:</strong> The power input is protected with transient suppression, common-mode filtering, and capacitive filtering to ensure a clean, noise-resilient supply rail.</li>
-                                            <li style="text-align: left;">
-                                                <strong>Power Conversion:</strong>
-                                                <ul style="padding-left: 20px; margin-top: 5px;">
-                                                    <li>The incoming voltage is stepped down through a high-efficiency switching regulator to generate a stable 12-volt rail.</li>
-                                                    <li>A secondary conversion stage provides a regulated 5-volt supply for auxiliary loads.</li>
-                                                    <li>A clean and stable 3.3-volt logic domain is derived from the 12-volt rail to supply control electronics.</li>
-                                                </ul>
-                                            </li>
-                                            <li style="text-align: left;"><strong>Control and System Monitoring:</strong> The control core monitors the input line and the regulated 12-volt output using dedicated measurement channels. A hardware reset line is provided for local maintenance and debugging.</li>
-                                            <li style="text-align: left;"><strong>Isolated Communication:</strong> External interfaces operate through a galvanically isolated CAN channel, offering strong resilience against electrical noise and ensuring reliable data exchange in industrial conditions.</li>
-                                            <li style="text-align: left;"><strong>Switching Architecture:</strong> The board supports six independent relay channels designed to handle high-current and high-voltage AC loads commonly found in industrial automation.</li>
-                                            <li style="text-align: left;"><strong>Relay Drive Stage:</strong> Control signals are galvanically isolated through optical couplers and processed by NPN driver elements, ensuring safe separation between logic circuitry and the high-power switching domain.</li>
-                                            <li style="text-align: left;">
-                                                <strong>PCB Layout & Design Strategy:</strong>
-                                                <ul style="padding-left: 20px; margin-top: 5px;">
-                                                    <li>High-current paths are routed with optimal width and thermal handling considerations.</li>
-                                                    <li>Ground domains for logic and power are separated to minimize interference.</li>
-                                                    <li>Component placement and layer structure were optimized to maintain EMI performance and overall signal integrity.</li>
-                                                    <li>Board geometry and routing differ from the previous version, offering improved mechanical layout for enclosure compatibility.</li>
-                                                </ul>
-                                            </li>
-                                            <li style="text-align: left;"><strong>Industrial Robustness:</strong> The design emphasizes long-term stability, noise immunity, thermal reliability, and resilience under harsh operating environments.</li>
+                                        <li style="text-align: left;">The Industrial Power-Control Relay Module is a 6-channel industrial switching and power management platform designed for reliable operation in electrically demanding environments. The system integrates multi-stage power regulation, isolated CAN communication, voltage monitoring, and high-current relay control into a single hardware platform. The design focuses on power integrity, EMI resilience, thermal performance, and long-term industrial reliability while providing flexible integration into automation and control systems.</li>
+                                        <li style="text-align: left;"><strong>System Architecture Design:</strong> Designed the complete hardware architecture for a 6-channel industrial relay control and power management system.</li>
+                                        <li style="text-align: left;"><strong>Input Protection Design:</strong>Implemented transient suppression, common-mode filtering, and capacitive filtering networks to improve immunity against electrical disturbances and conducted noise.</li>
+                                        <li style="text-align: left;"><strong>Multi-Stage Power Conversion:</strong>Designed a regulated power architecture generating stable 12V, 5V, and low-noise 3.3V rails for power and control subsystems.</li>
+                                        <li style="text-align: left;"><strong>Power Monitoring Implementation:</strong> Developed analog measurement circuits to monitor input voltage and regulated supply rails for system diagnostics and protection.</li>
+                                        <li style="text-align: left;"><strong>Microcontroller Integration:</strong> Integrated the control subsystem responsible for relay management, system monitoring, and communication functions.</li>
+                                        <li style="text-align: left;"><strong>Isolated CAN Communication:</strong> Implemented a galvanically isolated CAN communication interface to improve noise immunity and communication reliability in industrial environments.</li>
+                                        <li style="text-align: left;"><strong>Relay Control Architecture:</strong>Designed six independent relay channels capable of controlling high-current and high-voltage industrial AC loads.</li>
+                                        <li style="text-align: left;"><strong>Optically Isolated Drive System:</strong>Developed an optically isolated relay drive architecture to provide electrical separation between control electronics and power switching stages.</li>
+                                        <li style="text-align: left;"><strong>Relay Driver Circuit Design:</strong>Implemented NPN transistor-based driver stages to ensure reliable relay coil activation and stable operation.</li>
+                                        <li style="text-align: left;"><strong>Power and Logic Domain Isolation:</strong>Separated power and logic domains to reduce coupling noise and improve overall system stability.</li>
+                                        <li style="text-align: left;"><strong>PCB Layout Design:</strong> Applied grounding strategies, return-path optimization, and component placement techniques to improve electromagnetic compatibility and signal integrity.</li>
+                                        <li style="text-align: left;"><strong>EMI/EMC Optimization:</strong>Applied grounding strategies, return-path optimization, and component placement techniques to improve electromagnetic compatibility and signal integrity.</li>
+                                        <li style="text-align: left;"><strong>Mechanical Layout Optimization:</strong>Updated board geometry and component placement to improve enclosure compatibility and system integration.</li>
+                                        <li style="text-align: left;"><strong>Manufacturing Documentation:</strong>Generated Gerber, drill, assembly, and fabrication files required for PCB production.</li>
+                                        <li style="text-align: left;"><strong>Prototype Validation:</strong>Performed hardware verification and functional testing of power, communication, monitoring, and relay control subsystems.</li>                         
+                                    </ul>
+                                            
                                         </ul>
 
                                         
@@ -667,7 +661,7 @@
                                         </li>
                                         <li>
                                             <strong>Category:</strong>
-                                            Relay Board
+                                            Relay Control Board
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
