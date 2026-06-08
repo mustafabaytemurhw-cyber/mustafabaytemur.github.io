@@ -575,90 +575,27 @@
                                     <p class="item-intro text-muted">High-Performance Control and Power Management System for All-Terrain Electric Scooters</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
                                     <ul style="text-align: left; padding-left: 20px;">
-                                        <!-- 1. Overview -->
-                                        <li style="text-align: left;">
-                                            <strong>Overview:</strong> 
-                                            High‑performance main control board that manages every electronic subsystem of a rugged‑terrain 4×4 electric scooter. Optimised for KLS7212N motor drivers and equipped with a flexible interface to support alternative driver modules.
-                                        </li>
-
-                                        <!-- 2. Power & Protection Architecture -->
-                                        <li style="text-align: left;">
-                                            <strong>Power &amp; Protection Architecture:</strong>
-                                            <ul style="padding-left: 20px; margin-top: 5px;">
-                                                <li>48 V battery input guarded by TVS diodes (over‑voltage transients) and common‑mode chokes + LC‑filter network (EMI suppression).</li>
-                                                <li>Multi‑stage DC‑DC conversion creates isolated rails:
-                                                    <ul style="padding-left: 20px; margin-top: 5px;">
-                                                        <li>12 V rail – high‑efficiency buck regulator.</li>
-                                                        <li>5 V rail – secondary buck stage for auxiliary loads.</li>
-                                                        <li>3.3 V rail – low‑noise regulator for logic.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>All rails are continuously monitored by the STM32 MCU (ADC‑based voltage/temperature sensing) to guarantee system stability.</li>
-                                            </ul>
-                                        </li>
-
-                                        <!-- 3. Motor Drive & Actuation Control -->
-                                        <li style="text-align: left;">
-                                            <strong>Motor Drive &amp; Actuation Control:</strong>
-                                            <ul style="padding-left: 20px; margin-top: 5px;">
-                                                <li>Analog throttle signal captured by the STM32 MCU.</li>
-                                                <li>Software pipeline:
-                                                    <ul style="padding-left: 20px; margin-top: 5px;">
-                                                        <li>Digital filtering (FIR/EMA).</li>
-                                                        <li>Linearisation &amp; mapping to motor‑speed set‑point.</li>
-                                                        <li>Safety checks – sudden‑throttle protection, configurable speed‑limit.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Control output can be routed as:
-                                                    <ul style="padding-left: 20px; margin-top: 5px;">
-                                                        <li><strong>PWM</strong> – classic pulse‑width modulation.</li>
-                                                        <li><strong>DAC</strong> – analog voltage for drivers that accept an analog command.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Forward/reverse selection and braking are performed by high‑current MOSFET switching stages directly commanded by the MCU.</li>
-                                            </ul>
-                                        </li>
-
-                                        <!-- 4. Sensor Fusion & Feedback -->
-                                        <li style="text-align: left;">
-                                            <strong>Sensor Fusion &amp; Feedback:</strong>
-                                            <ul style="padding-left: 20px; margin-top: 5px;">
-                                                <li>Hall sensors – motor speed &amp; rotor position.</li>
-                                                <li>High‑resolution encoder – handlebar steering angle.</li>
-                                                <li>BNO055 9‑axis IMU – 3‑D orientation, linear acceleration, heading.</li>
-                                                <li>All sensor lines pass through level‑shifters, anti‑alias filters and conditioning circuits before reaching the MCU.</li>
-                                                <li>Kalman‑filter based fusion provides a low‑latency, robust estimate of vehicle state for traction‑control and stability‑assist functions.</li>
-                                            </ul>
-                                        </li>
-
-                                        <!-- 5. Industrial Communication -->
-                                        <li style="text-align: left;">
-                                            <strong>Industrial Communication:</strong> 
-                                            CAN 2.0B bus for deterministic, noise‑immune communication with the rider‑display, auxiliary modules and diagnostic tools. Message framing, error checking and bus termination are designed to automotive‑grade reliability.
-                                        </li>
-
-                                        <!-- 6. PCB Layout & EMI/EMC Optimization -->
-                                        <li style="text-align: left;">
-                                            <strong>PCB Layout &amp; EMI/EMC Optimization:</strong>
-                                            <ul style="padding-left: 20px; margin-top: 5px;">
-                                                <li>4‑layer stack‑up with thick copper (2 oz) on high‑current traces.</li>
-                                                <li>Separate analog, digital and power domains with dedicated ground planes.</li>
-                                                <li>Controlled‑impedance routing for high‑speed CAN traces.</li>
-                                                <li>Thermal management: thermal vias, large copper pours and MOSFET‑compatible heatsink pads.</li>
-                                                <li>EMI reduction via split‑plane strategy, ferrite beads and strategic component placement.</li>
-                                            </ul>
-                                        </li>
-                                        <!-- 7. Safety & System Reliability -->
-                                        <li style="text-align: left;">
-                                            <strong>Safety &amp; System Reliability:</strong>
-
-                                            <ul style="padding-left: 20px; margin-top: 5px;">
-                                                <li>Hardware safeguards – poly‑fuses, current limiters, reverse‑polarity protection.</li>
-                                                <li>Software watchdog timer (2 s timeout) plus periodic self‑test routines.</li>
-                                                <li>Continuous temperature &amp; voltage monitoring with fault logging and graceful shutdown.</li>
-                                                <li>Debug interface (SWD + UART) for in‑field diagnostics and OTA firmware updates.</li>
-                                            </ul>
-                                        </li>
+                                        <li style="text-align: left;">The RuggedRide 4x4 Main Control Board is a high-performance embedded control and power management platform designed for all-terrain electric scooters. The system manages motor control, power distribution, sensor acquisition, vehicle state estimation, communication, and safety monitoring through a centralized architecture. Designed around STM32 and ESP32 platforms, the board integrates multi-stage power conversion, advanced sensor fusion, CAN communication, and robust protection mechanisms to ensure reliable operation in demanding outdoor environments.</li>
+                                        <li style="text-align: left;"><strong>System Architecture Design:</strong> Designed the complete hardware architecture for a 4×4 electric scooter control and power management system.</li>
+                                        <li style="text-align: left;"><strong>48V Power Distribution Design:</strong> Developed a protected 48V power input stage incorporating TVS protection, common-mode filtering, and EMI suppression networks.</li>
+                                        <li style="text-align: left;"><strong>Multi-Stage Power Architecture:</strong>Designed a multi-stage power conversion system generating regulated 12V, 5V, and low-noise 3.3V rails for vehicle subsystems.</li>
+                                        <li style="text-align: left;"><strong>Microcontroller Integration:</strong> Integrated the control subsystem and supporting interfaces required for relay management, monitoring, and communication functions.</li>
+                                        <li style="text-align: left;"><strong>Power Monitoring Implementation:</strong> Integrated voltage and temperature monitoring circuits to continuously supervise system health and operating conditions.</li>
+                                        <li style="text-align: left;"><strong>Motor Control Interface Design:</strong> Developed hardware interfaces compatible with KLS7212N motor controllers while maintaining flexibility for alternative driver solutions.</li>
+                                        <li style="text-align: left;"><strong>Throttle Processing System:</strong> Designed analog throttle acquisition circuitry and signal conditioning interfaces for vehicle speed control.</li>
+                                        <li style="text-align: left;"><strong>Brake and Direction Control:</strong> Implemented dedicated forward, reverse, and braking control circuitry using MCU-controlled switching stages.</li>
+                                        <li style="text-align: left;"><strong>Sensor Integration:</strong>Integrated Hall sensors, high-resolution steering encoder, and BNO055 9-axis IMU for real-time vehicle feedback.</li>
+                                        <li style="text-align: left;"><strong>Signal Conditioning Design:</strong>Implemented level-shifting, filtering, and protection circuits to ensure reliable sensor acquisition and noise immunity.</li>
+                                        <li style="text-align: left;"><strong>Sensor Fusion Architecture:</strong> Developed the hardware infrastructure required for advanced vehicle state estimation and stability-control algorithms.</li>
+                                        <li style="text-align: left;"><strong>CAN Communication Network:</strong>Designed a CAN 2.0B communication interface for reliable communication between control modules, displays, and diagnostic systems.</li>
+                                        <li style="text-align: left;"><strong>STM32 & ESP32 Integration:</strong>Implemented a dual-controller architecture combining real-time motor control and wireless communication capabilities.</li>
+                                        <li style="text-align: left;"><strong>Safety System Design:</strong>Integrated reverse-polarity protection, fault monitoring, watchdog support, and voltage supervision mechanisms.</li>
+                                        <li style="text-align: left;"><strong>Debug & Service Interfaces:</strong>Added SWD and UART interfaces to support development, diagnostics, maintenance, and firmware updates.</li>
+                                        <li style="text-align: left;"><strong>PCB Layout Design:</strong>Designed a 4-layer PCB architecture with dedicated power, digital, and analog domains to improve signal integrity and system stability.</li>
+                                        <li style="text-align: left;"><strong>EMI/EMC Optimization:</strong>Applied grounding strategies, return-path optimization, ferrite-bead filtering, and component placement techniques to reduce electromagnetic interference.</li>
+                                        <li style="text-align: left;"><strong>Thermal Management Design:</strong>Implemented thermal vias, copper pours, and high-current routing techniques to improve heat dissipation and long-term reliability.</li>
+                                        <li style="text-align: left;"><strong>Manufacturing Documentation:</strong>Generated complete fabrication, assembly, and production documentation for manufacturing.</li>
+                                        <li style="text-align: left;"><strong>Prototype Validation:</strong>Performed hardware bring-up, subsystem verification, and functional testing of power, communication, sensor, and control circuits.</li>                               
                                     </ul>
 
                                     <ul class="list-inline">
